@@ -23,7 +23,7 @@ def to_str(dic):
   for val in dic.values():
     if type(val) is dict:
       if ('system' in val) and ('code' in val):
-        r = "{}|{}".format(val['system'], val['code'])
+        res = "{}|{}".format(val['system'], val['code'])
       else:
         return to_str(val)
     else:
@@ -37,23 +37,23 @@ def to_str(dic):
 def extract_answers(items):
   answers = {}
 
-  for _item in items:
-    _variable = _item['linkId']
+  for item in items:
+    variable = item['linkId']
 
-    if 'answer' in _item:
-      for _answer in _item['answer']:
+    if 'answer' in item:
+      for answer in item['answer']:
         answers.update({
-          _variable: to_str(_answer)
+          variable: to_str(answer)
         })
     
-    if 'item' in _item:
-        logging.info('Process nested items for item {}'.format(_item['linkId']))
-        answers.update(extract_answers(_item['item']))
+    if 'item' in item:
+        logging.info('Process nested items for item {}'.format(item['linkId']))
+        answers.update(extract_answers(item['item']))
 
   return answers
 
 
-logging.info('Load FHIR Bundle from file or stream')
+logging.info('Load FHIR Bundle from file')
 with open(filenames['source']) as json_file:
   bundle = json.load(json_file)
 
@@ -65,54 +65,49 @@ answers = []
 subjects = set()
 
 for entry in bundle['entry']:
-  _resource = entry['resource']
-  _authored = _resource['authored']
-  _questionnaire = _resource['questionnaire']
-  _subject = _resource['subject']['reference']
-
-  subjects.add(_subject)
-
+  resource = entry['resource']
   answer = {
-    'id': _subject,
-    'questionnaire': _questionnaire,
-    'date': _authored,
+    'id': resource['subject']['reference'],
+    'questionnaire': resource['questionnaire'],
+    'date': resource['authored'],
     'items': {}
   }
+  subjects.add(answer['id'])
 
   logging.debug('Process FHIR QuestionnaireResponse resource {}'.format(entry['fullUrl']))
-  if len(_resource['item']) == 0:
+  if len(resource['item']) == 0:
     logging.warning('Skip processing of resource {} because no item available'.format(entry['fullUrl']))
   else:
-    answer['items'] = extract_answers(_resource['item'])
+    answer['items'] = extract_answers(resource['item'])
     answers.append(answer)
 
 logging.debug(answers)
 logging.info('Flatten the structure of FHIR QuestionnaireResponse entries')
 rows = []
 
-for _subject in subjects:
-  _row = {'id': _subject}
+for subject in subjects:
+  row = {'id': subject}
 
-  for _answer in answers:
-    _prefix = _answer['questionnaire']
+  for answer in answers:
+    prefix = answer['questionnaire']
 
-    if _answer['id'] == _subject:
-      _col_date = "{}|{}".format(_prefix, "date")
-      _row[_col_date] = _answer['date']
+    if answer['id'] == subject:
+      col_date = "{}|{}".format(prefix, "date")
+      row[col_date] = answer['date']
 
-      for _key in _answer['items'].keys():
-        _col_item = "{}|{}".format(_prefix, _key)
-        _row[_col_item] = _answer['items'][_key]
+      for key in answer['items'].keys():
+        col_item = "{}|{}".format(prefix, key)
+        row[col_item] = answer['items'][key]
     
-  rows.append(_row)
+  rows.append(row)
 
 logging.debug(rows)
 logging.info('Extract unique column headers')
 headers = {}
 
-for _row in rows:
-  for _key in _row.keys():
-    headers[_key] = None
+for row in rows:
+  for key in row.keys():
+    headers[key] = None
 
 logging.debug(headers)
 logging.info('Write CSV data to file')
