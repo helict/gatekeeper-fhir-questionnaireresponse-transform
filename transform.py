@@ -4,9 +4,10 @@ import csv
 import logging
 
 filenames = {
-  'source': 'example.json',
+  'source': 'example-1.json',
   'target': 'example.csv',
-  'log': 'transform.log'
+  'log': 'transform.log',
+  'answer-codes': 'answer-codes-cm.json'
 }
 
 logging.basicConfig(
@@ -17,24 +18,43 @@ logging.basicConfig(
   datefmt='%Y-%m-%d %H:%M:%S'
 )
 
+def load_answer_codes():
+  code_map = {}
+
+  logging.info('Load FHIR ConceptMap answer codes from file')
+  with open(filenames['answer-codes']) as json_file:
+    concept_map = json.load(json_file)
+  
+  for group in concept_map['group']:
+    source = group['source']
+    logging.debug('Create answer code map for {}'.format(source))
+
+    for element in group['element']:
+      code_from = element['code']
+      code_to = element['target'][0]['code']
+      logging.debug('Map answer code from \'{}\' to \'{}\''.format(code_from, code_to))
+      code_map[source] = {code_from: code_to}
+
+  return code_map
+
 def to_str(dic):
-  res = ""
+  res = ''
 
   for val in dic.values():
     if type(val) is dict:
       if ('system' in val) and ('code' in val):
-        res = "{}|{}".format(val['system'], val['code'])
+        res = '{}|{}'.format(val['system'], val['code'])
       else:
         return to_str(val)
     else:
       if not res:
         res = val
       else:
-        res = "{}|{}".format(res, val)
+        res = '{}|{}'.format(res, val)
 
   return res
 
-def extract_answers(items):
+def extract_answers(items, questionnaire, answer_codes):
   answers = {}
 
   for item in items:
@@ -42,16 +62,18 @@ def extract_answers(items):
 
     if 'answer' in item:
       for answer in item['answer']:
-        answers.update({
-          variable: to_str(answer)
-        })
+        answer = to_str(answer)
+
+        if (questionnaire in answer_codes) and (answer in answer_codes[questionnaire]):
+          answers.update({variable: answer_codes[questionnaire][answer]})
+        else:
+          answers.update({variable: answer})
     
     if 'item' in item:
         logging.info('Process nested items for item {}'.format(item['linkId']))
-        answers.update(extract_answers(item['item']))
+        answers.update(extract_answers(item['item'], questionnaire, answer_codes))
 
   return answers
-
 
 logging.info('Load FHIR Bundle from file')
 with open(filenames['source']) as json_file:
@@ -63,6 +85,7 @@ logging.info('Extract FHIR QuestionnaireResponse entries from FHIR Bundle')
 
 answers = []
 subjects = set()
+answer_codes = load_answer_codes()
 
 for entry in bundle['entry']:
   resource = entry['resource']
@@ -78,7 +101,11 @@ for entry in bundle['entry']:
   if len(resource['item']) == 0:
     logging.warning('Skip processing of resource {} because no item available'.format(entry['fullUrl']))
   else:
-    answer['items'] = extract_answers(resource['item'])
+    answer['items'] = extract_answers(
+      resource['item'], 
+      resource['questionnaire'],
+      answer_codes
+    )
     answers.append(answer)
 
 logging.debug(answers)
@@ -92,11 +119,11 @@ for subject in subjects:
     prefix = answer['questionnaire']
 
     if answer['id'] == subject:
-      col_date = "{}|{}".format(prefix, "date")
+      col_date = '{}|{}'.format(prefix, 'date')
       row[col_date] = answer['date']
 
       for key in answer['items'].keys():
-        col_item = "{}|{}".format(prefix, key)
+        col_item = '{}|{}'.format(prefix, key)
         row[col_item] = answer['items'][key]
     
   rows.append(row)

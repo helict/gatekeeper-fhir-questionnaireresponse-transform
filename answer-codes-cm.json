@@ -1,0 +1,55 @@
+{
+  "resourceType": "ConceptMap",
+  "group": [
+    {
+      "source": "http://example.com/Questionnaire/EQ-5D",
+      "element": [
+        {
+          "code": "Ich habe mäßige Probleme herumzugehen.",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe leichte Probleme, mich selbst zu waschen oder anzuziehen.",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin nicht in der Lage, meinen alltäglichen Tätigkeiten nachzugehen.",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe keine Schmerzen oder Beschwerden.",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin sehr ängstlich oder deprimiert.",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
