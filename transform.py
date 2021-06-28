@@ -8,8 +8,8 @@ from pathlib import Path
 arg_parser = argparse.ArgumentParser(description = 'Transform FHIR Bundle with QuestionnaireResponse entries to CSV')
 arg_parser.add_argument('-a', '--codes', help='Path to FHIR ConceptMap file with answer codes', type=Path, default=None)
 arg_parser.add_argument('-d', '--dialect', help='Dialect used to format CSV', type=str, default='excel', choices=['excel', 'excel-tab', 'unix'])
-arg_parser.add_argument('-l', '--logfile', help='Path to log file', type=Path, default=Path('./result.log'))
-arg_parser.add_argument('-o', '--output', help='Path to CSV output file', type=Path, default=Path('./result.csv'))
+arg_parser.add_argument('-l', '--logfile', help='Path to log file', type=Path, default=Path('./output.log'))
+arg_parser.add_argument('-o', '--output', help='Path to CSV output file', type=Path, default=Path('./output.csv'))
 arg_parser.add_argument('-t', '--tag', help='Tag for survey time (QuestionnaireResponse.meta.tag)', type=str, default=None)
 arg_parser.add_argument('-v', '--verbosity', help='Verbosity of output', type=str, default='INFO', choices=['INFO', 'WARNING', 'DEBUG'])
 arg_parser.add_argument('bundle', help='Path to FHIR Bundle input file', type=Path)
@@ -97,24 +97,30 @@ answer_codes = load_answer_codes(args.codes)
 
 for entry in bundle['entry']:
   resource = entry['resource']
-  answer = {
-    'id': resource['subject']['reference'],
-    'questionnaire': resource['questionnaire'],
-    'date': resource['authored'],
-    'items': {}
-  }
-  subjects.add(answer['id'])
+  tag = None
 
-  logging.debug('Process FHIR QuestionnaireResponse resource {}'.format(entry['fullUrl']))
-  if len(resource['item']) == 0:
-    logging.warning('Skip processing of resource {} because no item available'.format(entry['fullUrl']))
-  else:
-    answer['items'] = extract_answers(
-      resource['item'], 
-      resource['questionnaire'],
-      answer_codes
-    )
-    answers.append(answer)
+  if ('meta' in resource) and ('tag' in resource['meta']):
+    tag = resource['meta']['tag']
+
+  if args.tag and (tag == args.tag):
+    answer = {
+      'id': resource['subject']['reference'],
+      'questionnaire': resource['questionnaire'],
+      'date': resource['authored'],
+      'items': {}
+    }
+    subjects.add(answer['id'])
+
+    logging.debug('Process FHIR QuestionnaireResponse resource {}'.format(entry['fullUrl']))
+    if len(resource['item']) == 0:
+      logging.warning('Skip processing of resource {} because no item available'.format(entry['fullUrl']))
+    else:
+      answer['items'] = extract_answers(
+        resource['item'], 
+        resource['questionnaire'],
+        answer_codes
+      )
+      answers.append(answer)
 
 logging.debug(answers)
 logging.info('Flatten the structure of FHIR QuestionnaireResponse entries')
