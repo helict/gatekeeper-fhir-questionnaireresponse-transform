@@ -1,28 +1,36 @@
 #!/usr/bin/env python3
-import json
+import argparse
 import csv
+import json
 import logging
+from pathlib import Path
 
-filenames = {
-  'source': 'example-1.json',
-  'target': 'example.csv',
-  'log': 'transform.log',
-  'answer-codes': 'answer-codes-cm.json'
-}
+arg_parser = argparse.ArgumentParser(description = 'Transform FHIR Bundle with QuestionnaireResponse entries to CSV')
+arg_parser.add_argument('-a', '--codes', help='Path to FHIR ConceptMap file with answer codes', type=Path, default=None)
+arg_parser.add_argument('-d', '--dialect', help='Dialect used to format CSV', type=str, default='excel', choices=['excel', 'excel-tab', 'unix'])
+arg_parser.add_argument('-l', '--logfile', help='Path to log file', type=Path, default=Path('./result.log'))
+arg_parser.add_argument('-o', '--output', help='Path to CSV output file', type=Path, default=Path('./result.csv'))
+arg_parser.add_argument('-t', '--tag', help='Tag for survey time (QuestionnaireResponse.meta.tag)', type=str, default=None)
+arg_parser.add_argument('-v', '--verbosity', help='Verbosity of output', type=str, default='INFO', choices=['INFO', 'WARNING', 'DEBUG'])
+arg_parser.add_argument('bundle', help='Path to FHIR Bundle input file', type=Path)
+args = arg_parser.parse_args()
 
 logging.basicConfig(
-  filename=filenames['log'], 
+  filename=args.logfile, 
   encoding='utf-8', 
-  level=logging.DEBUG,
+  level=logging.getLevelName(args.verbosity),
   format='%(asctime)s %(levelname)-8s %(message)s',
   datefmt='%Y-%m-%d %H:%M:%S'
 )
 
-def load_answer_codes():
+def load_answer_codes(answer_codes):
+  if not answer_codes:
+    return None
+
   code_map = {}
 
   logging.info('Load FHIR ConceptMap answer codes from file')
-  with open(filenames['answer-codes']) as json_file:
+  with open(answer_codes) as json_file:
     concept_map = json.load(json_file)
   
   for group in concept_map['group']:
@@ -64,7 +72,7 @@ def extract_answers(items, questionnaire, answer_codes):
       for answer in item['answer']:
         answer = to_str(answer)
 
-        if (questionnaire in answer_codes) and (answer in answer_codes[questionnaire]):
+        if answer_codes and (questionnaire in answer_codes) and (answer in answer_codes[questionnaire]):
           answers.update({variable: answer_codes[questionnaire][answer]})
         else:
           answers.update({variable: answer})
@@ -76,7 +84,7 @@ def extract_answers(items, questionnaire, answer_codes):
   return answers
 
 logging.info('Load FHIR Bundle from file')
-with open(filenames['source']) as json_file:
+with open(args.bundle) as json_file:
   bundle = json.load(json_file)
 
 logging.info('Read FHIR Bundle containing {} of {} entries'.format(len(bundle['entry']), bundle['total']))
@@ -85,7 +93,7 @@ logging.info('Extract FHIR QuestionnaireResponse entries from FHIR Bundle')
 
 answers = []
 subjects = set()
-answer_codes = load_answer_codes()
+answer_codes = load_answer_codes(args.codes)
 
 for entry in bundle['entry']:
   resource = entry['resource']
@@ -138,11 +146,11 @@ for row in rows:
 
 logging.debug(headers)
 logging.info('Write CSV data to file')
-with open(filenames['target'], 'w') as csv_file:
+with open(args.output, 'w') as csv_file:
   writer = csv.DictWriter(
     csv_file, 
     fieldnames = headers.keys(), 
-    dialect = 'excel-tab'
+    dialect = args.dialect
   )
   writer.writeheader()
   writer.writerows(rows)
