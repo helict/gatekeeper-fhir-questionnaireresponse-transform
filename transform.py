@@ -4,13 +4,20 @@ import csv
 import json
 import logging
 from pathlib import Path
+import re
+
+def fhir_coding_type(arg_value, pattern = re.compile(r'^.+\|.+$')):
+  if pattern.match(arg_value):
+    return arg_value
+
+  raise argparse.ArgumentTypeError
 
 arg_parser = argparse.ArgumentParser(description = 'Transform FHIR Bundle with QuestionnaireResponse entries to CSV')
-arg_parser.add_argument('-a', '--codes', help='Path to FHIR ConceptMap file with answer codes', type=Path, default=None)
+arg_parser.add_argument('-c', '--codes', help='Path to FHIR ConceptMap file with answer codes', type=Path, default=None)
 arg_parser.add_argument('-d', '--dialect', help='Dialect used to format CSV', type=str, default='excel', choices=['excel', 'excel-tab', 'unix'])
 arg_parser.add_argument('-l', '--logfile', help='Path to log file', type=Path, default=Path('./output.log'))
 arg_parser.add_argument('-o', '--output', help='Path to CSV output file', type=Path, default=Path('./output.csv'))
-arg_parser.add_argument('-t', '--tag', help='Tag for survey time (QuestionnaireResponse.meta.tag)', type=str, default=None)
+arg_parser.add_argument('-t', '--tag', help='Resource tag for survey time formatted as \"system|code\"', type=fhir_coding_type)
 arg_parser.add_argument('-v', '--verbosity', help='Verbosity of output', type=str, default='INFO', choices=['INFO', 'WARNING', 'DEBUG'])
 arg_parser.add_argument('bundle', help='Path to FHIR Bundle input file', type=Path)
 args = arg_parser.parse_args()
@@ -83,6 +90,21 @@ def extract_answers(items, questionnaire, answer_codes):
 
   return answers
 
+def has_tag(resource, tag_arg):
+  if resource and tag_arg:
+    logging.debug('Check {}/{} for tag \"{}\"'.format(resource['resourceType'], resource['id'], tag_arg))
+    if ('meta' in resource) and ('tag' in resource['meta']):
+      separator = '|'
+      system, code = tag_arg.split(separator)
+
+      for tag in resource['meta']['tag']:
+        if (tag['system'] == system) and (tag['code'] == code):
+          logging.debug('Found tag \"{}\" in {}/{} '.format(tag_arg, resource['resourceType'], resource['id']))
+          return True
+
+  logging.debug('Cannot find tag \"{}\" in {}/{} '.format(tag_arg, resource['resourceType'], resource['id']))
+  return False
+
 logging.info('Load FHIR Bundle from file')
 with open(args.bundle) as json_file:
   bundle = json.load(json_file)
@@ -93,16 +115,11 @@ logging.info('Extract FHIR QuestionnaireResponse entries from FHIR Bundle')
 
 answers = []
 subjects = set()
-answer_codes = load_answer_codes(args.codes)
 
 for entry in bundle['entry']:
   resource = entry['resource']
-  tag = None
 
-  if ('meta' in resource) and ('tag' in resource['meta']):
-    tag = resource['meta']['tag']
-
-  if args.tag and (tag == args.tag):
+  if has_tag(resource, args.tag):
     answer = {
       'id': resource['subject']['reference'],
       'questionnaire': resource['questionnaire'],
@@ -115,6 +132,7 @@ for entry in bundle['entry']:
     if len(resource['item']) == 0:
       logging.warning('Skip processing of resource {} because no item available'.format(entry['fullUrl']))
     else:
+      answer_codes = load_answer_codes(args.codes)
       answer['items'] = extract_answers(
         resource['item'], 
         resource['questionnaire'],
