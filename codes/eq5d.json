@@ -1,0 +1,235 @@
+{
+  "resourceType": "ConceptMap",
+  "group": [
+    {
+      "source": "http://example.com/Questionnaire/EQ-5D",
+      "element": [
+        {
+          "code": "Ich habe keine Probleme herumzugehen.",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe leichte Probleme herumzugehen.",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe mäßige Probleme herumzugehen.",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe große Probleme herumzugehen.",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin nicht in der Lage herumzugehen.",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe keine Probleme, mich selbst zu waschen oder anzuziehen.",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe leichte Probleme, mich selbst zu waschen oder anzuziehen.",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe mäßige Probleme, mich selbst zu waschen oder anzuziehen.",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe große Probleme, mich selbst zu waschen oder anzuziehen.",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin nicht in der Lage, mich selbst zu waschen oder anzuziehen.",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe keine Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe leichte Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe mäßige Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe große Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin nicht in der Lage, meinen alltäglichen Tätigkeiten nachzugehen.",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe keine Schmerzen oder Beschwerden.",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe leichte Schmerzen oder Beschwerden.",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe mäßige Schmerzen oder Beschwerden.",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe starke Schmerzen oder Beschwerden.",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich habe extreme Schmerzen oder Beschwerden.",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin nicht ängstlich oder deprimiert.",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin ein wenig ängstlich oder deprimiert.",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin mäßig ängstlich oder deprimiert.",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin sehr ängstlich oder deprimiert.",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Ich bin extrem ängstlich oder deprimiert.",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

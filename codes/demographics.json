@@ -1,0 +1,163 @@
+{
+  "resourceType": "ConceptMap",
+  "group": [
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS",
+      "element": [
+        {
+          "code": "male",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "female",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "other",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unknown",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "DE",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AU",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CH",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CY",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GR",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IT",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PO",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ES",
+          "target": [
+            {
+              "code": "8",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GB",
+          "target": [
+            {
+              "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HK",
+          "target": [
+            {
+              "code": "10",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TW",
+          "target": [
+            {
+              "code": "11",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SG",
+          "target": [
+            {
+              "code": "12",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "",
+          "target": [
+            {
+              "code": "13",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

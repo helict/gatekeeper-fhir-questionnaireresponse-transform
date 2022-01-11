@@ -2,10 +2,10 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/EQ-5D",
+      "source": "http://example.com/Questionnaire/ESSI",
       "element": [
         {
-          "code": "Ich habe mäßige Probleme herumzugehen.",
+          "code": "nie",
           "target": [
             {
               "code": "1",
@@ -14,7 +14,7 @@
           ]
         },
         {
-          "code": "Ich habe leichte Probleme, mich selbst zu waschen oder anzuziehen.",
+          "code": "selten",
           "target": [
             {
               "code": "2",
@@ -23,7 +23,7 @@
           ]
         },
         {
-          "code": "Ich bin nicht in der Lage, meinen alltäglichen Tätigkeiten nachzugehen.",
+          "code": "manchmal",
           "target": [
             {
               "code": "3",
@@ -32,7 +32,7 @@
           ]
         },
         {
-          "code": "Ich habe keine Schmerzen oder Beschwerden.",
+          "code": "meistens",
           "target": [
             {
               "code": "4",
@@ -41,7 +41,7 @@
           ]
         },
         {
-          "code": "Ich bin sehr ängstlich oder deprimiert.",
+          "code": "immer",
           "target": [
             {
               "code": "5",
