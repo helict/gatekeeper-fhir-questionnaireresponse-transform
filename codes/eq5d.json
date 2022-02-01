@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/EQ-5D",
+      "source": "http://example.com/Questionnaire/EQ-5D|EQ-5D.MB",
       "element": [
         {
           "code": "Ich habe keine Probleme herumzugehen.",
@@ -48,7 +48,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/EQ-5D|EQ-5D.SC",
+      "element": [
         {
           "code": "Ich habe keine Probleme, mich selbst zu waschen oder anzuziehen.",
           "target": [
@@ -93,7 +98,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/EQ-5D|EQ-5D.UA",
+      "element": [
         {
           "code": "Ich habe keine Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
           "target": [
@@ -138,7 +148,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/EQ-5D|EQ-5D.PD",
+      "element": [
         {
           "code": "Ich habe keine Schmerzen oder Beschwerden.",
           "target": [
@@ -183,7 +198,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/EQ-5D|EQ-5D.AD",
+      "element": [
         {
           "code": "Ich bin nicht ängstlich oder deprimiert.",
           "target": [

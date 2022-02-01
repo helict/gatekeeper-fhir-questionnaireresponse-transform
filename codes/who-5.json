@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/WHO-5",
+      "source": "http://example.com/Questionnaire/WHO-5|*",
       "element": [
         {
           "code": "Zu keinem Zeitpunkt",

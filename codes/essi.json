@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/ESSI",
+      "source": "http://example.com/Questionnaire/ESSI|*",
       "element": [
         {
           "code": "nie",

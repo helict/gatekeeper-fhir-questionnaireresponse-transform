@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/PHQ-MIX",
+      "source": "http://example.com/Questionnaire/PHQ-MIX|*",
       "element": [
         {
           "code": "LA6568-5",
@@ -39,7 +39,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/PHQ-MIX|PHQ-15.11",
+      "element": [
         {
           "code": "LA6572-7",
           "target": [

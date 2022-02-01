@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Geschlecht",
       "element": [
         {
           "code": "male",
@@ -39,7 +39,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Land",
+      "element": [
         {
           "code": "DE",
           "target": [

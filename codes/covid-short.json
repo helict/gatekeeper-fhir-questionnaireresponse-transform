@@ -2,633 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2",
-      "element": [
-        {
-          "code": "lebe allein",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "lebe mit Partner/Familie",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Wohngemeinschaft",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "lebe im Pflege-/Seniorenwohnheim",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "werde in stationärer Pflegeeinrichtung betreut",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "keinen festen Wohnsitz",
-          "target": [
-            {
-              "code": "6",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "keine feste Partnerschaft",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "feste Partnerschaft",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "verheiratet",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "geschieden",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "verwitwet",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "0/4",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "1/4",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "2/4",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "3/4",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "4/4",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "0",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "1",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "2",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "3",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "4",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "5",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "6",
-          "target": [
-            {
-              "code": "6",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": ">6",
-          "target": [
-            {
-              "code": "7",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "bisher kein Bildungsabschluss",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Förder-/Haupt-/Volksschule",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Realschule/POS/MSA",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Abitur/Fachabitur",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Fachschule/Lehre",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Meister",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Fachhochschule/Universität",
-          "target": [
-            {
-              "code": "6",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Promotion/Habilitation",
-          "target": [
-            {
-              "code": "7",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "sonstiges",
-          "target": [
-            {
-              "code": "8",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "berufstätig, Vollzeit",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "berufstätig, Teilzeit",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "berufstätig, gelegentlich",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "nicht berufstätig (Haushalt, Krankheit, Rente)",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "arbeitssuchend",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "keine Arbeitsunfähigkeit",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "bis zu 6 Wochen",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "7 Wochen bis 6 Monate",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "7 bis 18 Monate",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "länger als 18 Monate",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "keine Rente",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "laufendes Rentenverfahren",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "EU-/BU-Rente",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Frührente",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Altersrente/Pension",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "aktuell in einer Episode",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "im letzten Monat",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "im letzten halben Jahr",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "länger her",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "nein",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "ersten Grades (Eltern)",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "zweites Grades (Großeltern, Geschwister)",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "private Unterstützung z.B. durch Angehörige, Freunde",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "professionelle Unterstützung z.B. durch Pflegedienst",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "täglich",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "mehrmals pro Woche",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "einmal pro Woche",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "seltener",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "körperliche Einschränkungen",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Einschränkungen der geistigen Leistungsfähigkeit",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "psychische Belastung",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "keine",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Psychopharmaka",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "andere",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "false",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "true",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS",
+      "source": "http://example.com/Questionnaire/COVID-SHORT|demography.gender",
       "element": [
         {
           "code": "male",
@@ -665,9 +39,14 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|demography.country",
+      "element": [
         {
-          "code": "DE",
+          "code": "Cyprus",
           "target": [
             {
               "code": "1",
@@ -676,7 +55,7 @@
           ]
         },
         {
-          "code": "AU",
+          "code": "Germany",
           "target": [
             {
               "code": "2",
@@ -685,7 +64,7 @@
           ]
         },
         {
-          "code": "CH",
+          "code": "Greece",
           "target": [
             {
               "code": "3",
@@ -694,7 +73,7 @@
           ]
         },
         {
-          "code": "CY",
+          "code": "Italy",
           "target": [
             {
               "code": "4",
@@ -703,7 +82,7 @@
           ]
         },
         {
-          "code": "GR",
+          "code": "Poland",
           "target": [
             {
               "code": "5",
@@ -712,7 +91,7 @@
           ]
         },
         {
-          "code": "IT",
+          "code": "Spain",
           "target": [
             {
               "code": "6",
@@ -721,7 +100,7 @@
           ]
         },
         {
-          "code": "PO",
+          "code": "United Kingdom",
           "target": [
             {
               "code": "7",
@@ -730,7 +109,7 @@
           ]
         },
         {
-          "code": "ES",
+          "code": "Hong Kong",
           "target": [
             {
               "code": "8",
@@ -739,7 +118,7 @@
           ]
         },
         {
-          "code": "GB",
+          "code": "Taiwan",
           "target": [
             {
               "code": "9",
@@ -748,7 +127,7 @@
           ]
         },
         {
-          "code": "HK",
+          "code": "Singapore",
           "target": [
             {
               "code": "10",
@@ -757,28 +136,78 @@
           ]
         },
         {
-          "code": "TW",
+          "code": "*",
           "target": [
             {
               "code": "11",
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|demography.education",
+      "element": [
         {
-          "code": "SG",
+          "code": "No education",
           "target": [
             {
-              "code": "12",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "",
+          "code": "Primary school",
           "target": [
             {
-              "code": "13",
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Secondary school",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "High school",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "University degree",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Master degree",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PhD degree",
+          "target": [
+            {
+              "code": "7",
               "equivalence": "equivalent"
             }
           ]
@@ -786,10 +215,10 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/EQ-5D",
+      "source": "http://example.com/Questionnaire/COVID-SHORT|medicalHistory.problems",
       "element": [
         {
-          "code": "Ich habe keine Probleme herumzugehen.",
+          "code": "Respiratory illness",
           "target": [
             {
               "code": "1",
@@ -798,7 +227,7 @@
           ]
         },
         {
-          "code": "Ich habe leichte Probleme herumzugehen.",
+          "code": "Diabetes Type 2",
           "target": [
             {
               "code": "2",
@@ -807,7 +236,7 @@
           ]
         },
         {
-          "code": "Ich habe mäßige Probleme herumzugehen.",
+          "code": "Obesity",
           "target": [
             {
               "code": "3",
@@ -816,7 +245,7 @@
           ]
         },
         {
-          "code": "Ich habe große Probleme herumzugehen.",
+          "code": "Cardiovascular disease: heart failure, coronary artery disease or cardiomyopathies",
           "target": [
             {
               "code": "4",
@@ -825,7 +254,7 @@
           ]
         },
         {
-          "code": "Ich bin nicht in der Lage herumzugehen.",
+          "code": "Cancer",
           "target": [
             {
               "code": "5",
@@ -834,7 +263,57 @@
           ]
         },
         {
-          "code": "Ich habe keine Probleme, mich selbst zu waschen oder anzuziehen.",
+          "code": "Chronic kidney disease",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Arthritis",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Immune disorder",
+          "target": [
+            {
+              "code": "8",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Emotional or mental health problems such as Depression or Anxiety",
+          "target": [
+            {
+              "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "*",
+          "target": [
+            {
+              "code": "10",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|covid19HealthExposureStatus.infection",
+      "element": [
+        {
+          "code": "Yes, I had some symptoms and tested positive",
           "target": [
             {
               "code": "1",
@@ -843,7 +322,7 @@
           ]
         },
         {
-          "code": "Ich habe leichte Probleme, mich selbst zu waschen oder anzuziehen.",
+          "code": "Yes, I had some symptoms but tested negative",
           "target": [
             {
               "code": "2",
@@ -852,7 +331,7 @@
           ]
         },
         {
-          "code": "Ich habe mäßige Probleme, mich selbst zu waschen oder anzuziehen.",
+          "code": "Yes, I had some symptoms but never took a test",
           "target": [
             {
               "code": "3",
@@ -861,7 +340,7 @@
           ]
         },
         {
-          "code": "Ich habe große Probleme, mich selbst zu waschen oder anzuziehen.",
+          "code": "No, I had no symptoms but tested positive",
           "target": [
             {
               "code": "4",
@@ -870,142 +349,7 @@
           ]
         },
         {
-          "code": "Ich bin nicht in der Lage, mich selbst zu waschen oder anzuziehen.",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe keine Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe leichte Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe mäßige Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe große Probleme, meinen alltäglichen Tätigkeiten nachzugehen.",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich bin nicht in der Lage, meinen alltäglichen Tätigkeiten nachzugehen.",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe keine Schmerzen oder Beschwerden.",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe leichte Schmerzen oder Beschwerden.",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe mäßige Schmerzen oder Beschwerden.",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe starke Schmerzen oder Beschwerden.",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich habe extreme Schmerzen oder Beschwerden.",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich bin nicht ängstlich oder deprimiert.",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich bin ein wenig ängstlich oder deprimiert.",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich bin mäßig ängstlich oder deprimiert.",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich bin sehr ängstlich oder deprimiert.",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ich bin extrem ängstlich oder deprimiert.",
+          "code": "No, I never had symptoms neither tested positive",
           "target": [
             {
               "code": "5",
@@ -1016,10 +360,10 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/ESSI",
+      "source": "http://example.com/Questionnaire/COVID-SHORT|covid19PsychologicalImpact.generalQuestions.last2Weeks",
       "element": [
         {
-          "code": "nie",
+          "code": "Not at all",
           "target": [
             {
               "code": "1",
@@ -1028,7 +372,7 @@
           ]
         },
         {
-          "code": "selten",
+          "code": "Little",
           "target": [
             {
               "code": "2",
@@ -1037,7 +381,7 @@
           ]
         },
         {
-          "code": "manchmal",
+          "code": "Moderate",
           "target": [
             {
               "code": "3",
@@ -1046,7 +390,7 @@
           ]
         },
         {
-          "code": "meistens",
+          "code": "Quite a bit",
           "target": [
             {
               "code": "4",
@@ -1055,7 +399,7 @@
           ]
         },
         {
-          "code": "immer",
+          "code": "Strongly",
           "target": [
             {
               "code": "5",
@@ -1066,10 +410,215 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/PC-PTSD",
+      "source": "http://example.com/Questionnaire/COVID-SHORT|covid19PsychologicalImpact.generalQuestions.highestPeak",
       "element": [
         {
-          "code": "false",
+          "code": "Not at all",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Little",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Moderate",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Quite a bit",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Strongly",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|covid19PsychologicalImpact.PHQ4.psychosocialSupport",
+      "element": [
+        {
+          "code": "No",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None available",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "*",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|physicalActivity.overallLast2Weeks",
+      "element": [
+        {
+          "code": "Now I do less physical activity",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Now I do more or less the same amount of physical activity",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Now I do more physical activity",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|sleepHealth.overallQualityVsBeforeCovid19",
+      "element": [
+        {
+          "code": "Worse",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "The same",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Better",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|accessMedCares.bookAppointmentDuringCovid19",
+      "element": [
+        {
+          "code": "Much harder",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Somewhat harder",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "No change",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Somewhat easier",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Much easier",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Not applicable",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|virtualConsultations.beforeCovid19Virtual",
+      "element": [
+        {
+          "code": "LA32-8",
           "target": [
             {
               "code": "0",
@@ -1078,7 +627,7 @@
           ]
         },
         {
-          "code": "true",
+          "code": "LA33-6",
           "target": [
             {
               "code": "1",
@@ -1089,10 +638,10 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/PHQ-MIX",
+      "source": "http://example.com/Questionnaire/COVID-SHORT|virtualConsultations.duringCovid19Virtual",
       "element": [
         {
-          "code": "LA6568-5",
+          "code": "LA32-8",
           "target": [
             {
               "code": "0",
@@ -1101,64 +650,10 @@
           ]
         },
         {
-          "code": "LA6569-3",
+          "code": "LA33-6",
           "target": [
             {
               "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LA6570-1",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LA6571-9",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LA6572-7",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LA6573-5",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LA6575-0",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LA6574-3",
-          "target": [
-            {
-              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -1166,19 +661,10 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/WHO-5",
+      "source": "http://example.com/Questionnaire/COVID-SHORT|virtualConsultations.duringCovid19VirtualUsefulness",
       "element": [
         {
-          "code": "Zu keinem Zeitpunkt",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Ab und zu",
+          "code": "Very useful",
           "target": [
             {
               "code": "1",
@@ -1187,7 +673,7 @@
           ]
         },
         {
-          "code": "Etwas weniger als die Hälfte der Zeit",
+          "code": "Useful",
           "target": [
             {
               "code": "2",
@@ -1196,7 +682,7 @@
           ]
         },
         {
-          "code": "Etwas mehr als die Hälfte der Zeit",
+          "code": "Average",
           "target": [
             {
               "code": "3",
@@ -1205,7 +691,7 @@
           ]
         },
         {
-          "code": "Meistens",
+          "code": "Not useful",
           "target": [
             {
               "code": "4",
@@ -1214,10 +700,404 @@
           ]
         },
         {
-          "code": "Die ganze Zeit",
+          "code": "Not useful at all",
           "target": [
             {
               "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|virtualConsultations.futureWill",
+      "element": [
+        {
+          "code": "No, I would not want any virtual consultations",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Yes, but only as part of a mix of face-to-face and virtual consultations",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Yes, as many of my consultations as possible",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedBeforeCovid19",
+      "element": [
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Virtual consultation",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Remote monitoring",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Smartphone/tablet apps (e.g., tracking personal activity or psychological well-being)",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Wearable technology (e.g., a wristband activity tracker)",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Smart scales",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Websites",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Social media",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Electronic health records",
+          "target": [
+            {
+              "code": "8",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Online support communities",
+          "target": [
+            {
+              "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "*",
+          "target": [
+            {
+              "code": "10",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedDuringCovid19",
+      "element": [
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Virtual consultation",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Remote monitoring",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Smartphone/tablet apps (e.g., tracking personal activity or psychological well-being)",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Wearable technology (e.g., a wristband activity tracker)",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Smart scales",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Websites",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Social media",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Electronic health records",
+          "target": [
+            {
+              "code": "8",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Online support communities",
+          "target": [
+            {
+              "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "*",
+          "target": [
+            {
+              "code": "10",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.usageIntent",
+      "element": [
+        {
+          "code": "Health and wellness advisories",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Remote monitoring of ongoing health issues through at-home devices",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Routine appointments",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Mental health appointments",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Appointments with medical specialists from chronic conditions",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Appointments with medical specialists for diagnosis or acute care",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Diagnoses for illnesses, diseases and disorders",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None of the above",
+          "target": [
+            {
+              "code": "8",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.usageImpediments",
+      "element": [
+        {
+          "code": "Concerns about my privacy or data security",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Don’t trust the effectiveness of the service",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Prefer my current providers",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Don’t take the initiative to try something new or change my habit",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Don’t know where to start",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Lack of access or affordability of the devices I need",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Haven’t heard of any",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None of the above",
+          "target": [
+            {
+              "code": "8",
               "equivalence": "equivalent"
             }
           ]

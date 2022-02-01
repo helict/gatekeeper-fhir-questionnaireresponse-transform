@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Wohnsituation",
       "element": [
         {
           "code": "lebe allein",
@@ -57,7 +57,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Partnerschaft",
+      "element": [
         {
           "code": "keine feste Partnerschaft",
           "target": [
@@ -102,7 +107,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Beziehung",
+      "element": [
         {
           "code": "0/4",
           "target": [
@@ -147,7 +157,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Kinder",
+      "element": [
         {
           "code": "0",
           "target": [
@@ -219,7 +234,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Abschluss",
+      "element": [
         {
           "code": "bisher kein Bildungsabschluss",
           "target": [
@@ -230,7 +250,16 @@
           ]
         },
         {
-          "code": "Förder-/Haupt-/Volksschule",
+          "code": "kein Berufsabschluss",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Förder- /Haupt- /Volksschule",
           "target": [
             {
               "code": "1",
@@ -300,7 +329,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Berufstätigkeit",
+      "element": [
         {
           "code": "berufstätig, Vollzeit",
           "target": [
@@ -345,7 +379,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Arbeitsunfähigkeit",
+      "element": [
         {
           "code": "keine Arbeitsunfähigkeit",
           "target": [
@@ -390,7 +429,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Rente",
+      "element": [
         {
           "code": "keine Rente",
           "target": [
@@ -435,7 +479,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Episodenzeitpunkt",
+      "element": [
         {
           "code": "aktuell in einer Episode",
           "target": [
@@ -471,7 +520,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Demenzerkrankung",
+      "element": [
         {
           "code": "nein",
           "target": [
@@ -498,7 +552,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Unterstützung_durch",
+      "element": [
         {
           "code": "private Unterstützung z.B. durch Angehörige, Freunde",
           "target": [
@@ -516,7 +575,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Unterstützung_Häufigkeit",
+      "element": [
         {
           "code": "täglich",
           "target": [
@@ -552,7 +616,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Unterstützung_Grund",
+      "element": [
         {
           "code": "körperliche Einschränkungen",
           "target": [
@@ -579,7 +648,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Medikamente",
+      "element": [
         {
           "code": "keine",
           "target": [
@@ -606,7 +680,12 @@
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|*",
+      "element": [
         {
           "code": "false",
           "target": [

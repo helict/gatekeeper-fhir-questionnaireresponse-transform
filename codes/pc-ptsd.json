@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/PC-PTSD",
+      "source": "http://example.com/Questionnaire/PC-PTSD|*",
       "element": [
         {
           "code": "false",

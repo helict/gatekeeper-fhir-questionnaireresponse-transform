@@ -58,63 +58,97 @@ def load_answer_codes(answer_codes):
 
   return code_map
 
-def to_str(answer, prefix = '', separator = '|'):
+def to_str(answer):
   res = ''
 
-  if ('valueBoolean' in answer):
-    res = str(answer['valueBoolean']).lower()
-  elif ('valueCoding' in answer):
-    res = answer['valueCoding']['code']
-  elif ('valueQuantity' in answer):
-    res = answer['valueQuantity']['value']
-
-    if ('comparator' in answer['valueQuantity']):
-      comp = answer['valueQuantity']['comparator']
-      res = '{}{}'.format(comp, res)
+  if type(answer) == dict:
+    if ('valueBoolean' in answer):
+      res = str(answer['valueBoolean']).lower()
+    elif ('valueCoding' in answer):
+      res = answer['valueCoding']['code']
+    elif ('valueQuantity' in answer):
+      res = answer['valueQuantity']['value']
+      if ('comparator' in answer['valueQuantity']):
+        comp = answer['valueQuantity']['comparator']
+        res = '{}{}'.format(comp, res)
+    else:
+      res = to_str(answer[next(iter(answer))])
   else:
-    res = answer[next(iter(answer))]
+    res = str(answer)
 
-  if prefix:
-    return '{}{}{}'.format(prefix, separator, res)
-  else:
-    return res
+  return res
 
 def extract_answers(items, questionnaire, answer_codes):
-  answers = {}
+  extracted_answers = {}
 
   for item in items:
-    variable = item['linkId']
+    link_id = item['linkId']
+    answer_code_source = '{}|{}'.format(questionnaire, link_id)
+    answer_code_source_shared = '{}|*'.format(questionnaire)
 
     if 'answer' in item:
-      for answer in item['answer']:
-        answer = to_str(answer)
+      answers = item['answer']
+      has_multiple_answers = (len(answers) > 1)
 
-        if answer_codes and (questionnaire in answer_codes) and (answer in answer_codes[questionnaire]):
-          logging.debug('Perform answer coding for answer: {}|{}'.format(variable, answer))
-          answers.update({variable: answer_codes[questionnaire][answer]})
-        else:
-          logging.debug('Skip answer coding for answer: {}|{}'.format(variable, answer))
-          answers.update({variable: answer})
+      if has_multiple_answers:
+        logging.info('Found multiple answers: {}|{}'.format(questionnaire, link_id))
+
+        for answer in answers:
+          answer = to_str(answer)
+          answer_code_target = None
+
+          if answer_code_source in answer_codes:
+            if answer in answer_codes[answer_code_source]:
+              # Found coding for answer in dict
+              answer_code_target = answer_codes[answer_code_source][answer]
+            elif '*' in answer_codes[answer_code_source]:
+              # Found * as coding for answer in dict
+              answer_code_target = answer_codes[answer_code_source]['*']
+          elif (answer_code_source_shared in answer_codes) and (answer in answer_codes[answer_code_source_shared]):
+            # Found coding for answer in shared coding dict
+            answer_code_target = answer_codes[answer_code_source_shared][answer]
+
+          if answer_code_target:
+            variable = '{}.{}'.format(link_id, answer_code_target)
+            logging.debug('Perform answer coding for answer: {}|{}'.format(variable, answer))
+            extracted_answers.update({variable: 1})
+          else:
+            logging.warning('Skip answer coding for multiple answer: {}|{}'.format(link_id, answer))
+
+      else:
+        for answer in answers:
+          answer = to_str(answer)
+
+          if answer_codes and (answer_code_source in answer_codes) and (answer in answer_codes[answer_code_source]):
+            logging.debug('Perform answer coding for answer: {}|{}'.format(link_id, answer))
+            extracted_answers.update({link_id: answer_codes[answer_code_source][answer]})
+          elif answer_codes and (answer_code_source_shared in answer_codes) and (answer in answer_codes[answer_code_source_shared]):
+            logging.debug('Perform answer coding for answer: {}|{}'.format(link_id, answer))
+            extracted_answers.update({link_id: answer_codes[answer_code_source_shared][answer]})
+          else:
+            logging.warning('Skip answer coding for answer: {}|{}'.format(link_id, answer))
+            extracted_answers.update({link_id: answer})
     
     if 'item' in item:
         logging.info('Process nested items for item {}'.format(item['linkId']))
-        answers.update(extract_answers(item['item'], questionnaire, answer_codes))
+        extracted_answers.update(extract_answers(item['item'], questionnaire, answer_codes))
 
-  return answers
+  return extracted_answers
 
-def has_tag(resource, tag_arg):
-  if resource and tag_arg:
-    logging.debug('Check {}/{} for tag \"{}\"'.format(resource['resourceType'], resource['id'], tag_arg))
-    if ('meta' in resource) and ('tag' in resource['meta']):
-      separator = '|'
-      system, code = tag_arg.split(separator)
+def has_tag(entry, tag_arg):
+  resource = entry['resource']
+  logging.debug('Check {} for tag \"{}\"'.format(entry['fullUrl'], tag_arg))
 
-      for tag in resource['meta']['tag']:
-        if (tag['system'] == system) and (tag['code'] == code):
-          logging.debug('Found tag \"{}\" in {}/{} '.format(tag_arg, resource['resourceType'], resource['id']))
-          return True
+  if ('meta' in resource) and ('tag' in resource['meta']):
+    separator = '|'
+    system, code = tag_arg.split(separator)
 
-  logging.debug('Cannot find tag \"{}\" in {}/{} '.format(tag_arg, resource['resourceType'], resource['id']))
+    for tag in resource['meta']['tag']:
+      if (tag['system'] == system) and (tag['code'] == code):
+        logging.debug('Found tag \"{}\" in {} '.format(tag_arg, entry['fullUrl']))
+        return True
+
+  logging.debug('Cannot find tag \"{}\" in {} '.format(tag_arg, entry['fullUrl']))
   return False
 
 def main():
@@ -132,7 +166,7 @@ def main():
   for entry in bundle['entry']:
     resource = entry['resource']
   
-    if has_tag(resource, args.tag):
+    if has_tag(entry, args.tag):
       answer = {
         'id': resource['subject']['reference'],
         'questionnaire': resource['questionnaire'],
