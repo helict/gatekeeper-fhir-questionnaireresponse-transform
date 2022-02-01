@@ -193,6 +193,7 @@ def main():
     answer = {
       'id': subject,
       'questionnaire': questionnaire,
+      'name': re.sub(r'^.*/(.*)$', r'\1', questionnaire),
       'date': date,
       'tag': get_tag_prefix(resource),
       'items': {}
@@ -205,11 +206,18 @@ def main():
       answer['items'] = extract_answers(questionnaire, items, answer_codes)
       answers.append(answer)
 
-  # Apply tag as prefix to linkIds
+  # Apply tag (or empty tag) to linkIds and date
   for answer in answers:
     tag = answer['tag']
+    name = answer['name']
     tagged_items = {}
+    
+    # Format authoring date and prepend as item
+    date = answer['date']
+    date_variable = '{}{}_Date'.format(tag, name)
+    tagged_items[date_variable] = datetime.strptime(date, '%Y-%m-%dT%H:%M:%S.%fZ').strftime('%d.%m.%Y')
 
+    # Apply tag as prefix to linkIds
     for link_id in answer['items'].keys():
       new_link_id = '{}{}'.format(tag, link_id)
       tagged_items[new_link_id] = answer['items'][link_id]
@@ -218,31 +226,19 @@ def main():
     answer['items'] = tagged_items
 
   # Flatten the answers to row-column format
-  logging.debug(answers)
   logging.info('Flatten the structure of FHIR QuestionnaireResponse entries')
   rows = []
-  source_date_format = '%Y-%m-%dT%H:%M:%S.%fZ'
-  target_date_format = '%d.%m.%Y'
   
   for subject in subjects:
     row = {'id': subject}
-  
+
     for answer in answers:
-      # TODO: Fix string static replacement
-      prefix = answer['questionnaire'].replace('http://example.com/Questionnaire/', '')
-  
       if answer['id'] == subject:
-        col_date = '{}|{}'.format(prefix, 'date')
-        source_date = datetime.strptime(answer['date'], source_date_format)
-        target_date = source_date.strftime(target_date_format)
-        row[col_date] = target_date
-  
         for key in answer['items'].keys():
           row[key] = answer['items'][key]
       
     rows.append(row)
   
-  logging.debug(rows)
   logging.info('Extract unique column headers')
   headers = {}
   
