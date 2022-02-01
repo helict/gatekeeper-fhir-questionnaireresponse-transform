@@ -172,23 +172,23 @@ def main():
   # Transform each bundle entry resource (QuesionnaireResponse)
   for entry in entries:
     resource = entry['resource']
+    subject = resource['subject']['reference']
+    questionnaire = resource['questionnaire']
+    date = resource['authored']
+    items = resource['item']
+    subjects.add(subject)
     answer = {
-      'id': resource['subject']['reference'],
-      'questionnaire': resource['questionnaire'],
-      'date': resource['authored'],
+      'id': subject,
+      'questionnaire': questionnaire,
+      'date': date,
       'items': {}
     }
-    subjects.add(answer['id'])
   
     logging.debug('Process FHIR QuestionnaireResponse resource {} for questionnaire {}'.format(entry['fullUrl'], resource['questionnaire']))
-    if len(resource['item']) == 0:
+    if len(items) == 0:
       logging.warning('Skip processing of resource {} because no item available'.format(entry['fullUrl']))
     else:
-      answer['items'] = extract_answers(
-        resource['item'], 
-        resource['questionnaire'],
-        answer_codes
-      )
+      answer['items'] = extract_answers(items, questionnaire, answer_codes)
       answers.append(answer)
   
   logging.debug(answers)
