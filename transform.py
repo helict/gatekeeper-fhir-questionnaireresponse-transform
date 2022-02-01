@@ -78,7 +78,7 @@ def to_str(answer):
 
   return res
 
-def extract_answers(items, questionnaire, answer_codes):
+def extract_answers(questionnaire, items, answer_codes):
   extracted_answers = {}
 
   for item in items:
@@ -131,7 +131,7 @@ def extract_answers(items, questionnaire, answer_codes):
     
     if 'item' in item:
         logging.info('Process nested items for item {}'.format(item['linkId']))
-        extracted_answers.update(extract_answers(item['item'], questionnaire, answer_codes))
+        extracted_answers.update(extract_answers(questionnaire, item['item'], answer_codes))
 
   return extracted_answers
 
@@ -149,6 +149,19 @@ def has_tag(entry, tag_arg):
 
   logging.debug('Cannot find tag \"{}\" in {} '.format(tag_arg, entry['fullUrl']))
   return False
+
+def get_tags(resource):
+  result = {}
+
+  if ('meta' in resource) and ('tag' in resource['meta']):
+    for tag in resource['meta']['tag']:
+      result.update({ tag['system']: tag['code']})
+
+  return result
+
+def get_tag_prefix(resource):
+  tags = get_tags(resource)
+  return ''.join(['{}_'.format(tag.upper()) for tag in tags.values()]) if tags else ''
 
 def main():
   logging.info('Load FHIR Bundle from file')
@@ -181,6 +194,7 @@ def main():
       'id': subject,
       'questionnaire': questionnaire,
       'date': date,
+      'tag': get_tag_prefix(resource),
       'items': {}
     }
   
@@ -188,9 +202,22 @@ def main():
     if len(items) == 0:
       logging.warning('Skip processing of resource {} because no item available'.format(entry['fullUrl']))
     else:
-      answer['items'] = extract_answers(items, questionnaire, answer_codes)
+      answer['items'] = extract_answers(questionnaire, items, answer_codes)
       answers.append(answer)
-  
+
+  # Apply tag as prefix to linkIds
+  for answer in answers:
+    tag = answer['tag']
+    tagged_items = {}
+
+    for link_id in answer['items'].keys():
+      new_link_id = '{}{}'.format(tag, link_id)
+      tagged_items[new_link_id] = answer['items'][link_id]
+
+    del answer['items']
+    answer['items'] = tagged_items
+
+  # Flatten the answers to row-column format
   logging.debug(answers)
   logging.info('Flatten the structure of FHIR QuestionnaireResponse entries')
   rows = []
