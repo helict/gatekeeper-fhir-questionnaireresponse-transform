@@ -4,6 +4,7 @@ import csv
 import json
 import logging
 import re
+import unicodedata
 from datetime import datetime
 from pathlib import Path
 
@@ -58,6 +59,10 @@ def load_answer_codes(answer_codes):
 
   return code_map
 
+# Removes non printable ASCII characters from string
+def sanitize_str(s):
+  return ''.join(ch for ch in s if not unicodedata.category(ch).startswith('C'))
+
 def to_str(answer):
   res = ''
 
@@ -79,7 +84,7 @@ def to_str(answer):
   else:
     res = str(answer)
 
-  return res
+  return sanitize_str(res) if type(res) == str else res
 
 def extract_answers(questionnaire, items, answer_codes):
   extracted_answers = {}
