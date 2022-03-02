@@ -65,7 +65,10 @@ def to_str(answer):
     if ('valueBoolean' in answer):
       res = str(answer['valueBoolean']).lower()
     elif ('valueCoding' in answer):
-      res = answer['valueCoding']['code']
+      if ('code' in answer['valueCoding']):
+        res = answer['valueCoding']['code']
+      else:
+        logging.warning('Missing \'code\' for valueCoding in answer')
     elif ('valueQuantity' in answer):
       res = answer['valueQuantity']['value']
       if ('comparator' in answer['valueQuantity']):
