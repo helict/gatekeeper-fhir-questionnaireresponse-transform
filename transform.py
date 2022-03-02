@@ -171,6 +171,7 @@ def main():
   logging.info('Read FHIR Bundle containing {} of {} entries'.format(len(bundle['entry']), bundle['total']))
   logging.info('Extract FHIR QuestionnaireResponse entries from FHIR Bundle')
   
+  entries = []
   answers = []
   answer_codes = load_answer_codes(args.codes)
   subjects = set()
@@ -180,7 +181,17 @@ def main():
     entries = list(filter(lambda entry: has_tag(entry, args.tag), bundle['entry']))
     logging.debug('Filtered {} of {} bundle entries with tag {}'.format(len(entries), len(bundle['entry']), args.tag))
   else:
-    entries = bundle['entry']
+    for entry in bundle['entry']:
+      # Check resource type and existence of subject
+      if entry['resource']['resourceType'] == 'QuestionnaireResponse':
+        if not 'subject' in entry['resource']:
+          logging.warning('Skip processing of resource {} because of missing subject'.format(entry['fullUrl']))
+        elif not 'reference' in entry['resource']['subject']:
+          logging.warning('Skip processing of resource {} because only subject references can be handled'.format(entry['fullUrl']))
+        else:
+          entries.append(entry)
+      else:
+        logging.debug('Skip processing of resource {} because of resource type mismatch'.format(entry['fullUrl']))
 
   # Transform each bundle entry resource (QuesionnaireResponse)
   for entry in entries:
