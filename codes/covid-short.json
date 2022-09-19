@@ -638,6 +638,29 @@
       ]
     },
     {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|virtualConsultations.duringCovid19F2F",
+      "element": [
+        {
+          "code": "LA32-8",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA33-6",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "source": "http://example.com/Questionnaire/COVID-SHORT|virtualConsultations.duringCovid19Virtual",
       "element": [
         {

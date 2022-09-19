@@ -1,0 +1,127 @@
+{
+  "resourceType": "ConceptMap",
+  "group": [
+    {
+      "source": "http://example.com/Questionnaire/PHQ-D|*",
+      "element": [
+        {
+          "code": "nicht beeinträchtigt",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "wenig beeinträchtigt",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "stark beeinträchtigt",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "überhaupt nicht",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "an einzelnen Tagen",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "an mehr als der Hälfte der Tage",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "beinahe jeden Tag",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "false",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "true",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA6587-7",
+          "target": [
+            {
+              "code": "",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA6588-5",
+          "target": [
+            {
+              "code": "",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA6590-0",
+          "target": [
+            {
+              "code": "",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "??",
+          "target": [
+            {
+              "code": "",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

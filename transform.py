@@ -104,7 +104,7 @@ def extract_answers(questionnaire, items, answer_codes):
         for answer in answers:
           answer = to_str(answer)
           answer_code_target = None
-
+          
           if answer_code_source in answer_codes:
             if answer in answer_codes[answer_code_source]:
               # Found coding for answer in dict
@@ -130,6 +130,9 @@ def extract_answers(questionnaire, items, answer_codes):
           if answer_codes and (answer_code_source in answer_codes) and (answer in answer_codes[answer_code_source]):
             logging.debug('Perform answer coding for answer: {}|{}'.format(link_id, answer))
             extracted_answers.update({link_id: answer_codes[answer_code_source][answer]})
+          elif answer_codes and (answer_code_source in answer_codes) and ('*' in answer_codes[answer_code_source]):
+            logging.debug('Perform answer coding for answer: {}|{}'.format(link_id, answer))
+            extracted_answers.update({link_id: answer_codes[answer_code_source]['*']})
           elif answer_codes and (answer_code_source_shared in answer_codes) and (answer in answer_codes[answer_code_source_shared]):
             logging.debug('Perform answer coding for answer: {}|{}'.format(link_id, answer))
             extracted_answers.update({link_id: answer_codes[answer_code_source_shared][answer]})
