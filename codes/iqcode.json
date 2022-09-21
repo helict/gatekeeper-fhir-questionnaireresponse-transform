@@ -2,19 +2,10 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/PHQ-D|*",
+      "source": "http://example.com/Questionnaire/IQCODE|SUS.1",
       "element": [
         {
-          "code": "nicht beeinträchtigt",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "wenig beeinträchtigt",
+          "code": "Partner/in",
           "target": [
             {
               "code": "1",
@@ -23,7 +14,7 @@
           ]
         },
         {
-          "code": "stark beeinträchtigt",
+          "code": "Tochter/Sohn",
           "target": [
             {
               "code": "2",
@@ -32,34 +23,7 @@
           ]
         },
         {
-          "code": "überhaupt nicht",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "an einzelnen Tagen",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "an mehr als der Hälfte der Tage",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "beinahe jeden Tag",
+          "code": "Freund/in",
           "target": [
             {
               "code": "3",
@@ -68,34 +32,30 @@
           ]
         },
         {
-          "code": "false",
+          "code": "Nachbar/in",
           "target": [
             {
-              "code": "0",
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "true",
+          "code": "anderes",
           "target": [
             {
-              "code": "1",
+              "code": "5",
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/IQCODE|*",
+      "element": [
         {
-          "code": "LA6587-7",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "LA6588-5",
+          "code": "viel besser",
           "target": [
             {
               "code": "1",
@@ -104,7 +64,7 @@
           ]
         },
         {
-          "code": "LA6590-0",
+          "code": "ein bisschen besser",
           "target": [
             {
               "code": "2",
@@ -113,10 +73,28 @@
           ]
         },
         {
-          "code": "LA6589-3",
+          "code": "unverändert",
           "target": [
             {
               "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ein bisschen schlechter",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "viel schlechter",
+          "target": [
+            {
+              "code": "5",
               "equivalence": "equivalent"
             }
           ]

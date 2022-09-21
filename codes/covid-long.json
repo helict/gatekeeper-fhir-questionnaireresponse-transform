@@ -603,10 +603,10 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19HealthExposureStatus.other",
       "element": [
         {
-          "code": "Yes, someone with positive test",
+          "code": "No",
           "target": [
             {
-              "code": "1",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -615,16 +615,16 @@
           "code": "Yes, someone with the symptoms likely to be associated with an infection",
           "target": [
             {
-              "code": "2",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "No",
+          "code": "Yes, someone with positive test",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -635,19 +635,19 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19HealthExposureStatus.household",
       "element": [
         {
-          "code": "LA32-8",
+          "code": "LA33-6",
           "target": [
             {
-              "code": "0",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "LA33-6",
+          "code": "LA32-8",
           "target": [
             {
-              "code": "1",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -1722,7 +1722,7 @@
           "code": "No",
           "target": [
             {
-              "code": "1",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -1731,7 +1731,7 @@
           "code": "None available",
           "target": [
             {
-              "code": "2",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -1740,7 +1740,7 @@
           "code": "*",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -1754,7 +1754,7 @@
           "code": "No",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -2551,7 +2551,30 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA33-6",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|virtualConsultations.duringCovid19F2F",
+      "element": [
+        {
+          "code": "LA32-8",
+          "target": [
+            {
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -2574,7 +2597,7 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -3546,7 +3569,7 @@
           "code": "No",
           "target": [
             {
-              "code": "0",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -3555,7 +3578,7 @@
           "code": "Yes, once",
           "target": [
             {
-              "code": "1",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -3564,7 +3587,7 @@
           "code": "Yes, twice or more",
           "target": [
             {
-              "code": "2",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -3573,7 +3596,7 @@
           "code": "Not applicable",
           "target": [
             {
-              "code": "3",
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
@@ -3705,7 +3728,7 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -3725,15 +3748,6 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.will",
       "element": [
         {
-          "code": "LA32-8",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LA33-6",
           "target": [
             {
@@ -3743,10 +3757,19 @@
           ]
         },
         {
-          "code": "LA12693-0",
+          "code": "LA32-8",
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA12693-0",
+          "target": [
+            {
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -3757,15 +3780,6 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.adverseEffects",
       "element": [
         {
-          "code": "LA32-8",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LA33-6",
           "target": [
             {
@@ -3775,10 +3789,19 @@
           ]
         },
         {
-          "code": "LA12693-0",
+          "code": "LA32-8",
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA12693-0",
+          "target": [
+            {
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -3789,15 +3812,6 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.everyYear",
       "element": [
         {
-          "code": "LA32-8",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LA33-6",
           "target": [
             {
@@ -3807,10 +3821,19 @@
           ]
         },
         {
-          "code": "LA12693-0",
+          "code": "LA32-8",
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA12693-0",
+          "target": [
+            {
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]

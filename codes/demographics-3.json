@@ -2,7 +2,7 @@
   "resourceType": "ConceptMap",
   "group": [
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Wohnsituation",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Wohnsituation",
       "element": [
         {
           "code": "lebe allein",
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Partnerschaft",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Partnerschaft",
       "element": [
         {
           "code": "keine feste Partnerschaft",
@@ -111,7 +111,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Beziehung",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Beziehung",
       "element": [
         {
           "code": "0/4",
@@ -161,170 +161,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Kinder",
-      "element": [
-        {
-          "code": "0",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "1",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "2",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "3",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "4",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "5",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "6",
-          "target": [
-            {
-              "code": "6",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": ">6",
-          "target": [
-            {
-              "code": "7",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Abschluss",
-      "element": [
-        {
-          "code": "bisher kein Bildungsabschluss",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Förder- /Haupt- /Volksschule",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Realschule/POS/MSA",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Abitur/Fachabitur",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Fachschule/Lehre",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Meister",
-          "target": [
-            {
-              "code": "5",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Fachhochschule/Universität",
-          "target": [
-            {
-              "code": "6",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "Promotion/Habilitation",
-          "target": [
-            {
-              "code": "7",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "sonstiges",
-          "target": [
-            {
-              "code": "8",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Berufstätigkeit",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Berufstätigkeit",
       "element": [
         {
           "code": "berufstätig, Vollzeit",
@@ -374,13 +211,13 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Arbeitsunfähigkeit",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Arbeitsunfähigkeit",
       "element": [
         {
           "code": "keine Arbeitsunfähigkeit",
           "target": [
             {
-              "code": "0",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -389,7 +226,7 @@
           "code": "bis zu 6 Wochen",
           "target": [
             {
-              "code": "1",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -398,7 +235,7 @@
           "code": "7 Wochen bis 6 Monate",
           "target": [
             {
-              "code": "2",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -407,7 +244,7 @@
           "code": "7 bis 18 Monate",
           "target": [
             {
-              "code": "3",
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
@@ -416,7 +253,7 @@
           "code": "länger als 18 Monate",
           "target": [
             {
-              "code": "4",
+              "code": "5",
               "equivalence": "equivalent"
             }
           ]
@@ -424,19 +261,10 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Rente",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Rente",
       "element": [
         {
           "code": "keine Rente",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "laufendes Rentenverfahren",
           "target": [
             {
               "code": "1",
@@ -445,7 +273,7 @@
           ]
         },
         {
-          "code": "EU-/BU-Rente",
+          "code": "laufendes Rentenverfahren",
           "target": [
             {
               "code": "2",
@@ -454,7 +282,7 @@
           ]
         },
         {
-          "code": "Frührente",
+          "code": "EU-/BU-Rente",
           "target": [
             {
               "code": "3",
@@ -463,10 +291,19 @@
           ]
         },
         {
-          "code": "Altersrente/Pension",
+          "code": "Frührente",
           "target": [
             {
               "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Altersrente/Pension",
+          "target": [
+            {
+              "code": "5",
               "equivalence": "equivalent"
             }
           ]
@@ -474,7 +311,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Episodenzeitpunkt",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Episodenzeitpunkt",
       "element": [
         {
           "code": "aktuell in einer Episode",
@@ -508,38 +345,6 @@
           "target": [
             {
               "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Demenzerkrankung",
-      "element": [
-        {
-          "code": "nein",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "ersten Grades (Eltern)",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "zweites Grades (Großeltern, Geschwister)",
-          "target": [
-            {
-              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -597,7 +402,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Unterstützung_durch",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_durch",
       "element": [
         {
           "code": "private Unterstützung z.B. durch Angehörige, Freunde",
@@ -620,7 +425,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Unterstützung_Häufigkeit",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_Häufigkeit",
       "element": [
         {
           "code": "täglich",
@@ -661,7 +466,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Unterstützung_Grund",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_Grund",
       "element": [
         {
           "code": "körperliche Einschränkungen",
@@ -693,7 +498,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Medikamente",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Medikamente",
       "element": [
         {
           "code": "keine",
@@ -725,7 +530,7 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|*",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|*",
       "element": [
         {
           "code": "false",

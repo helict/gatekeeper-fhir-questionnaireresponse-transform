@@ -1,0 +1,55 @@
+{
+  "resourceType": "ConceptMap",
+  "group": [
+    {
+      "source": "http://example.com/Questionnaire/MCTS|*",
+      "element": [
+        {
+          "code": "nie",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "fast nie",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "manchmal",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "meistens",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "immer",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -690,7 +690,7 @@
           "code": "Very useful",
           "target": [
             {
-              "code": "1",
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
@@ -699,7 +699,7 @@
           "code": "Useful",
           "target": [
             {
-              "code": "2",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -708,7 +708,7 @@
           "code": "Average",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -717,7 +717,7 @@
           "code": "Not useful",
           "target": [
             {
-              "code": "4",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -726,7 +726,7 @@
           "code": "Not useful at all",
           "target": [
             {
-              "code": "5",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -769,15 +769,6 @@
       "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedBeforeCovid19",
       "element": [
         {
-          "code": "None",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "Virtual consultation",
           "target": [
             {
@@ -854,6 +845,15 @@
           "target": [
             {
               "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "11",
               "equivalence": "equivalent"
             }
           ]
@@ -873,15 +873,6 @@
       "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedDuringCovid19",
       "element": [
         {
-          "code": "None",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "Virtual consultation",
           "target": [
             {
@@ -958,6 +949,15 @@
           "target": [
             {
               "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "11",
               "equivalence": "equivalent"
             }
           ]

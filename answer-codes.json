@@ -985,10 +985,10 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19HealthExposureStatus.other",
       "element": [
         {
-          "code": "Yes, someone with positive test",
+          "code": "No",
           "target": [
             {
-              "code": "1",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -997,16 +997,16 @@
           "code": "Yes, someone with the symptoms likely to be associated with an infection",
           "target": [
             {
-              "code": "2",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "No",
+          "code": "Yes, someone with positive test",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -1017,19 +1017,19 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19HealthExposureStatus.household",
       "element": [
         {
-          "code": "LA32-8",
+          "code": "LA33-6",
           "target": [
             {
-              "code": "0",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "LA33-6",
+          "code": "LA32-8",
           "target": [
             {
-              "code": "1",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -2104,7 +2104,7 @@
           "code": "No",
           "target": [
             {
-              "code": "1",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -2113,7 +2113,7 @@
           "code": "None available",
           "target": [
             {
-              "code": "2",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -2122,7 +2122,7 @@
           "code": "*",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -2136,7 +2136,7 @@
           "code": "No",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -2933,7 +2933,30 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA33-6",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|virtualConsultations.duringCovid19F2F",
+      "element": [
+        {
+          "code": "LA32-8",
+          "target": [
+            {
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -2956,7 +2979,7 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -3928,7 +3951,7 @@
           "code": "No",
           "target": [
             {
-              "code": "0",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -3937,7 +3960,7 @@
           "code": "Yes, once",
           "target": [
             {
-              "code": "1",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -3946,7 +3969,7 @@
           "code": "Yes, twice or more",
           "target": [
             {
-              "code": "2",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -3955,7 +3978,7 @@
           "code": "Not applicable",
           "target": [
             {
-              "code": "3",
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
@@ -4087,7 +4110,7 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -4107,15 +4130,6 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.will",
       "element": [
         {
-          "code": "LA32-8",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LA33-6",
           "target": [
             {
@@ -4125,10 +4139,19 @@
           ]
         },
         {
-          "code": "LA12693-0",
+          "code": "LA32-8",
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA12693-0",
+          "target": [
+            {
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -4139,15 +4162,6 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.adverseEffects",
       "element": [
         {
-          "code": "LA32-8",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LA33-6",
           "target": [
             {
@@ -4157,10 +4171,19 @@
           ]
         },
         {
-          "code": "LA12693-0",
+          "code": "LA32-8",
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA12693-0",
+          "target": [
+            {
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -4171,15 +4194,6 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.everyYear",
       "element": [
         {
-          "code": "LA32-8",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LA33-6",
           "target": [
             {
@@ -4189,10 +4203,19 @@
           ]
         },
         {
-          "code": "LA12693-0",
+          "code": "LA32-8",
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA12693-0",
+          "target": [
+            {
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -4801,10 +4824,10 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19HealthExposureStatus.other",
       "element": [
         {
-          "code": "Yes, someone with positive test",
+          "code": "No",
           "target": [
             {
-              "code": "1",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -4813,16 +4836,16 @@
           "code": "Yes, someone with the symptoms likely to be associated with an infection",
           "target": [
             {
-              "code": "2",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "No",
+          "code": "Yes, someone with positive test",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -4833,19 +4856,19 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19HealthExposureStatus.household",
       "element": [
         {
-          "code": "LA32-8",
+          "code": "LA33-6",
           "target": [
             {
-              "code": "0",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "LA33-6",
+          "code": "LA32-8",
           "target": [
             {
-              "code": "1",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -5920,7 +5943,7 @@
           "code": "No",
           "target": [
             {
-              "code": "1",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -5929,7 +5952,7 @@
           "code": "None available",
           "target": [
             {
-              "code": "2",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -5938,7 +5961,7 @@
           "code": "*",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -5952,7 +5975,7 @@
           "code": "No",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -6749,7 +6772,30 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA33-6",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|virtualConsultations.duringCovid19F2F",
+      "element": [
+        {
+          "code": "LA32-8",
+          "target": [
+            {
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -6772,7 +6818,7 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -7744,7 +7790,7 @@
           "code": "No",
           "target": [
             {
-              "code": "0",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -7753,7 +7799,7 @@
           "code": "Yes, once",
           "target": [
             {
-              "code": "1",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -7762,7 +7808,7 @@
           "code": "Yes, twice or more",
           "target": [
             {
-              "code": "2",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -7771,7 +7817,7 @@
           "code": "Not applicable",
           "target": [
             {
-              "code": "3",
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
@@ -7903,7 +7949,7 @@
           "code": "LA32-8",
           "target": [
             {
-              "code": "0",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -7923,15 +7969,6 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.will",
       "element": [
         {
-          "code": "LA32-8",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LA33-6",
           "target": [
             {
@@ -7941,10 +7978,19 @@
           ]
         },
         {
-          "code": "LA12693-0",
+          "code": "LA32-8",
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA12693-0",
+          "target": [
+            {
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -7955,15 +8001,6 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.adverseEffects",
       "element": [
         {
-          "code": "LA32-8",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "LA33-6",
           "target": [
             {
@@ -7973,10 +8010,19 @@
           ]
         },
         {
-          "code": "LA12693-0",
+          "code": "LA32-8",
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "LA12693-0",
+          "target": [
+            {
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -7987,19 +8033,19 @@
       "source": "http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1|covid19Vaccination.everyYear",
       "element": [
         {
-          "code": "LA32-8",
+          "code": "LA33-6",
           "target": [
             {
-              "code": "0",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "LA33-6",
+          "code": "LA32-8",
           "target": [
             {
-              "code": "1",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -8008,7 +8054,7 @@
           "code": "LA12693-0",
           "target": [
             {
-              "code": "2",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -8704,7 +8750,7 @@
           "code": "Very useful",
           "target": [
             {
-              "code": "1",
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
@@ -8713,7 +8759,7 @@
           "code": "Useful",
           "target": [
             {
-              "code": "2",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -8722,7 +8768,7 @@
           "code": "Average",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -8731,7 +8777,7 @@
           "code": "Not useful",
           "target": [
             {
-              "code": "4",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -8740,7 +8786,7 @@
           "code": "Not useful at all",
           "target": [
             {
-              "code": "5",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -8783,15 +8829,6 @@
       "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedBeforeCovid19",
       "element": [
         {
-          "code": "None",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "Virtual consultation",
           "target": [
             {
@@ -8868,6 +8905,15 @@
           "target": [
             {
               "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "11",
               "equivalence": "equivalent"
             }
           ]
@@ -8887,15 +8933,6 @@
       "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedDuringCovid19",
       "element": [
         {
-          "code": "None",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "Virtual consultation",
           "target": [
             {
@@ -8972,6 +9009,15 @@
           "target": [
             {
               "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "11",
               "equivalence": "equivalent"
             }
           ]
@@ -9830,7 +9876,7 @@
           "code": "Very useful",
           "target": [
             {
-              "code": "1",
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
@@ -9839,7 +9885,7 @@
           "code": "Useful",
           "target": [
             {
-              "code": "2",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -9848,7 +9894,7 @@
           "code": "Average",
           "target": [
             {
-              "code": "3",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
@@ -9857,7 +9903,7 @@
           "code": "Not useful",
           "target": [
             {
-              "code": "4",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -9866,7 +9912,7 @@
           "code": "Not useful at all",
           "target": [
             {
-              "code": "5",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -9909,15 +9955,6 @@
       "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedBeforeCovid19",
       "element": [
         {
-          "code": "None",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "Virtual consultation",
           "target": [
             {
@@ -9994,6 +10031,15 @@
           "target": [
             {
               "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "11",
               "equivalence": "equivalent"
             }
           ]
@@ -10013,15 +10059,6 @@
       "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedDuringCovid19",
       "element": [
         {
-          "code": "None",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "Virtual consultation",
           "target": [
             {
@@ -10098,6 +10135,15 @@
           "target": [
             {
               "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "11",
               "equivalence": "equivalent"
             }
           ]
@@ -10268,6 +10314,332 @@
       ]
     },
     {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Geschlecht",
+      "element": [
+        {
+          "code": "male",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "female",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "other",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unknown",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Land",
+      "element": [
+        {
+          "code": "DE",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AU",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CH",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CY",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GR",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IT",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PO",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ES",
+          "target": [
+            {
+              "code": "8",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GB",
+          "target": [
+            {
+              "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HK",
+          "target": [
+            {
+              "code": "10",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TW",
+          "target": [
+            {
+              "code": "11",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SG",
+          "target": [
+            {
+              "code": "12",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "",
+          "target": [
+            {
+              "code": "13",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Geschlecht",
+      "element": [
+        {
+          "code": "male",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "female",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "other",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unknown",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Land",
+      "element": [
+        {
+          "code": "DE",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "AU",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CH",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "CY",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GR",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "IT",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "PO",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ES",
+          "target": [
+            {
+              "code": "8",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "GB",
+          "target": [
+            {
+              "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "HK",
+          "target": [
+            {
+              "code": "10",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "TW",
+          "target": [
+            {
+              "code": "11",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "SG",
+          "target": [
+            {
+              "code": "12",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "",
+          "target": [
+            {
+              "code": "13",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Wohnsituation",
       "element": [
         {
@@ -10508,15 +10880,6 @@
       "element": [
         {
           "code": "bisher kein Bildungsabschluss",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "kein Berufsabschluss",
           "target": [
             {
               "code": "0",
@@ -10815,6 +11178,56 @@
           "target": [
             {
               "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Belastungsstärke?",
+      "element": [
+        {
+          "code": "0/4",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "1/4",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2/4",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "3/4",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "4/4",
+          "target": [
+            {
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
@@ -11221,15 +11634,6 @@
           ]
         },
         {
-          "code": "kein Berufsabschluss",
-          "target": [
-            {
-              "code": "0",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
           "code": "Förder- /Haupt- /Volksschule",
           "target": [
             {
@@ -11527,6 +11931,56 @@
       ]
     },
     {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Belastungsstärke?",
+      "element": [
+        {
+          "code": "0/4",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "1/4",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2/4",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "3/4",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "4/4",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Unterstützung_durch",
       "element": [
         {
@@ -11678,10 +12132,10 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Geschlecht",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Wohnsituation",
       "element": [
         {
-          "code": "male",
+          "code": "lebe allein",
           "target": [
             {
               "code": "1",
@@ -11690,7 +12144,7 @@
           ]
         },
         {
-          "code": "female",
+          "code": "lebe mit Partner/Familie",
           "target": [
             {
               "code": "2",
@@ -11699,7 +12153,7 @@
           ]
         },
         {
-          "code": "other",
+          "code": "Wohngemeinschaft",
           "target": [
             {
               "code": "3",
@@ -11708,48 +12162,7 @@
           ]
         },
         {
-          "code": "unknown",
-          "target": [
-            {
-              "code": "4",
-              "equivalence": "equivalent"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Land",
-      "element": [
-        {
-          "code": "DE",
-          "target": [
-            {
-              "code": "1",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "AU",
-          "target": [
-            {
-              "code": "2",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CH",
-          "target": [
-            {
-              "code": "3",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "CY",
+          "code": "lebe im Pflege-/Seniorenwohnheim",
           "target": [
             {
               "code": "4",
@@ -11758,7 +12171,7 @@
           ]
         },
         {
-          "code": "GR",
+          "code": "werde in stationärer Pflegeeinrichtung betreut",
           "target": [
             {
               "code": "5",
@@ -11767,84 +12180,30 @@
           ]
         },
         {
-          "code": "IT",
+          "code": "keinen festen Wohnsitz",
           "target": [
             {
               "code": "6",
               "equivalence": "equivalent"
             }
           ]
-        },
-        {
-          "code": "PO",
-          "target": [
-            {
-              "code": "7",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "ES",
-          "target": [
-            {
-              "code": "8",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "GB",
-          "target": [
-            {
-              "code": "9",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "HK",
-          "target": [
-            {
-              "code": "10",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "TW",
-          "target": [
-            {
-              "code": "11",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "SG",
-          "target": [
-            {
-              "code": "12",
-              "equivalence": "equivalent"
-            }
-          ]
-        },
-        {
-          "code": "",
-          "target": [
-            {
-              "code": "13",
-              "equivalence": "equivalent"
-            }
-          ]
         }
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Geschlecht",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Partnerschaft",
       "element": [
         {
-          "code": "male",
+          "code": "keine feste Partnerschaft",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "feste Partnerschaft",
           "target": [
             {
               "code": "1",
@@ -11853,7 +12212,7 @@
           ]
         },
         {
-          "code": "female",
+          "code": "verheiratet",
           "target": [
             {
               "code": "2",
@@ -11862,7 +12221,7 @@
           ]
         },
         {
-          "code": "other",
+          "code": "geschieden",
           "target": [
             {
               "code": "3",
@@ -11871,7 +12230,7 @@
           ]
         },
         {
-          "code": "unknown",
+          "code": "verwitwet",
           "target": [
             {
               "code": "4",
@@ -11882,10 +12241,19 @@
       ]
     },
     {
-      "source": "http://example.com/Questionnaire/DEMOGRAPHICS|DEMOGRAPHICS.Land",
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Beziehung",
       "element": [
         {
-          "code": "DE",
+          "code": "0/4",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "1/4",
           "target": [
             {
               "code": "1",
@@ -11894,7 +12262,7 @@
           ]
         },
         {
-          "code": "AU",
+          "code": "2/4",
           "target": [
             {
               "code": "2",
@@ -11903,7 +12271,7 @@
           ]
         },
         {
-          "code": "CH",
+          "code": "3/4",
           "target": [
             {
               "code": "3",
@@ -11912,7 +12280,48 @@
           ]
         },
         {
-          "code": "CY",
+          "code": "4/4",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Berufstätigkeit",
+      "element": [
+        {
+          "code": "berufstätig, Vollzeit",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "berufstätig, Teilzeit",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "berufstätig, gelegentlich",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "nicht berufstätig (Haushalt, Krankheit, Rente)",
           "target": [
             {
               "code": "4",
@@ -11921,7 +12330,399 @@
           ]
         },
         {
-          "code": "GR",
+          "code": "arbeitssuchend",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Arbeitsunfähigkeit",
+      "element": [
+        {
+          "code": "keine Arbeitsunfähigkeit",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "bis zu 6 Wochen",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "7 Wochen bis 6 Monate",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "7 bis 18 Monate",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "länger als 18 Monate",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Rente",
+      "element": [
+        {
+          "code": "keine Rente",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "laufendes Rentenverfahren",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EU-/BU-Rente",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Frührente",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Altersrente/Pension",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Episodenzeitpunkt",
+      "element": [
+        {
+          "code": "aktuell in einer Episode",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "im letzten Monat",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "im letzten halben Jahr",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "länger her",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Belastungsstärke?",
+      "element": [
+        {
+          "code": "0/4",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "1/4",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2/4",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "3/4",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "4/4",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_durch",
+      "element": [
+        {
+          "code": "private Unterstützung z.B. durch Angehörige, Freunde",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "professionelle Unterstützung z.B. durch Pflegedienst",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_Häufigkeit",
+      "element": [
+        {
+          "code": "täglich",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "mehrmals pro Woche",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "einmal pro Woche",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "seltener",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_Grund",
+      "element": [
+        {
+          "code": "körperliche Einschränkungen",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Einschränkungen der geistigen Leistungsfähigkeit",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "psychische Belastung",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Medikamente",
+      "element": [
+        {
+          "code": "keine",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Psychopharmaka",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "andere",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|*",
+      "element": [
+        {
+          "code": "false",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "true",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Wohnsituation",
+      "element": [
+        {
+          "code": "lebe allein",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "lebe mit Partner/Familie",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Wohngemeinschaft",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "lebe im Pflege-/Seniorenwohnheim",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "werde in stationärer Pflegeeinrichtung betreut",
           "target": [
             {
               "code": "5",
@@ -11930,73 +12731,502 @@
           ]
         },
         {
-          "code": "IT",
+          "code": "keinen festen Wohnsitz",
           "target": [
             {
               "code": "6",
               "equivalence": "equivalent"
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Partnerschaft",
+      "element": [
         {
-          "code": "PO",
+          "code": "keine feste Partnerschaft",
           "target": [
             {
-              "code": "7",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "ES",
+          "code": "feste Partnerschaft",
           "target": [
             {
-              "code": "8",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "GB",
+          "code": "verheiratet",
           "target": [
             {
-              "code": "9",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "HK",
+          "code": "geschieden",
           "target": [
             {
-              "code": "10",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "TW",
+          "code": "verwitwet",
           "target": [
             {
-              "code": "11",
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Beziehung",
+      "element": [
+        {
+          "code": "0/4",
+          "target": [
+            {
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "SG",
+          "code": "1/4",
           "target": [
             {
-              "code": "12",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "",
+          "code": "2/4",
           "target": [
             {
-              "code": "13",
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "3/4",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "4/4",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Berufstätigkeit",
+      "element": [
+        {
+          "code": "berufstätig, Vollzeit",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "berufstätig, Teilzeit",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "berufstätig, gelegentlich",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "nicht berufstätig (Haushalt, Krankheit, Rente)",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "arbeitssuchend",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Arbeitsunfähigkeit",
+      "element": [
+        {
+          "code": "keine Arbeitsunfähigkeit",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "bis zu 6 Wochen",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "7 Wochen bis 6 Monate",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "7 bis 18 Monate",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "länger als 18 Monate",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Rente",
+      "element": [
+        {
+          "code": "keine Rente",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "laufendes Rentenverfahren",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "EU-/BU-Rente",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Frührente",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Altersrente/Pension",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Episodenzeitpunkt",
+      "element": [
+        {
+          "code": "aktuell in einer Episode",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "im letzten Monat",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "im letzten halben Jahr",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "länger her",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-2|DEMOGRAPHICS.Belastungsstärke?",
+      "element": [
+        {
+          "code": "0/4",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "1/4",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "2/4",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "3/4",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "4/4",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_durch",
+      "element": [
+        {
+          "code": "private Unterstützung z.B. durch Angehörige, Freunde",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "professionelle Unterstützung z.B. durch Pflegedienst",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_Häufigkeit",
+      "element": [
+        {
+          "code": "täglich",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "mehrmals pro Woche",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "einmal pro Woche",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "seltener",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Unterstützung_Grund",
+      "element": [
+        {
+          "code": "körperliche Einschränkungen",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Einschränkungen der geistigen Leistungsfähigkeit",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "psychische Belastung",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|DEMOGRAPHICS.Medikamente",
+      "element": [
+        {
+          "code": "keine",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Psychopharmaka",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "andere",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/DEMOGRAPHICS-T1|*",
+      "element": [
+        {
+          "code": "false",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "true",
+          "target": [
+            {
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -12604,6 +13834,306 @@
       ]
     },
     {
+      "source": "http://example.com/Questionnaire/IQCODE|SUS.1",
+      "element": [
+        {
+          "code": "Partner/in",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Tochter/Sohn",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Freund/in",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Nachbar/in",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "anderes",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/IQCODE|*",
+      "element": [
+        {
+          "code": "viel besser",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ein bisschen besser",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unverändert",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ein bisschen schlechter",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "viel schlechter",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/IQCODE|SUS.1",
+      "element": [
+        {
+          "code": "Partner/in",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Tochter/Sohn",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Freund/in",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Nachbar/in",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "anderes",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/IQCODE|*",
+      "element": [
+        {
+          "code": "viel besser",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ein bisschen besser",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "unverändert",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "ein bisschen schlechter",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "viel schlechter",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/MCTS|*",
+      "element": [
+        {
+          "code": "nie",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "fast nie",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "manchmal",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "meistens",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "immer",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/MCTS|*",
+      "element": [
+        {
+          "code": "nie",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "fast nie",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "manchmal",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "meistens",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "immer",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "source": "http://example.com/Questionnaire/PAM-13|*",
       "element": [
         {
@@ -13083,7 +14613,7 @@
           "code": "LA6587-7",
           "target": [
             {
-              "code": "",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -13092,7 +14622,7 @@
           "code": "LA6588-5",
           "target": [
             {
-              "code": "",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -13101,16 +14631,16 @@
           "code": "LA6590-0",
           "target": [
             {
-              "code": "",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "??",
+          "code": "LA6589-3",
           "target": [
             {
-              "code": "",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -13205,7 +14735,7 @@
           "code": "LA6587-7",
           "target": [
             {
-              "code": "",
+              "code": "0",
               "equivalence": "equivalent"
             }
           ]
@@ -13214,7 +14744,7 @@
           "code": "LA6588-5",
           "target": [
             {
-              "code": "",
+              "code": "1",
               "equivalence": "equivalent"
             }
           ]
@@ -13223,16 +14753,16 @@
           "code": "LA6590-0",
           "target": [
             {
-              "code": "",
+              "code": "2",
               "equivalence": "equivalent"
             }
           ]
         },
         {
-          "code": "??",
+          "code": "LA6589-3",
           "target": [
             {
-              "code": "",
+              "code": "3",
               "equivalence": "equivalent"
             }
           ]
@@ -14141,6 +15671,106 @@
           "target": [
             {
               "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/WHO-QOL|*",
+      "element": [
+        {
+          "code": "sehr schlecht",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "schlecht",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "mittelmäßig",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "gut",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "sehr gut",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/WHO-QOL|*",
+      "element": [
+        {
+          "code": "sehr schlecht",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "schlecht",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "mittelmäßig",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "gut",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "sehr gut",
+          "target": [
+            {
+              "code": "4",
               "equivalence": "equivalent"
             }
           ]
