@@ -20,6 +20,7 @@ arg_parser.add_argument('-d', '--dialect', help='Dialect used to format CSV', ty
 arg_parser.add_argument('-l', '--logfile', help='Path to log file', type=Path, default=Path('./output.log'))
 arg_parser.add_argument('-o', '--output', help='Path to CSV output file', type=Path, default=Path('./output.csv'))
 arg_parser.add_argument('-t', '--tag', help='Resource tag for survey time formatted as \"system|code\"', type=fhir_coding_type, default=None)
+arg_parser.add_argument('-n', '--names', help='Variable names (linkIds) mappings', type=Path, default=None)
 arg_parser.add_argument('-v', '--verbosity', help='Verbosity of output', type=str, default='INFO', choices=['INFO', 'WARNING', 'DEBUG'])
 arg_parser.add_argument('bundle', help='Path to FHIR JSON Bundle input file', type=Path)
 args = arg_parser.parse_args()
@@ -32,6 +33,32 @@ logging.basicConfig(
   format='%(asctime)s %(levelname)-8s %(message)s',
   datefmt='%Y-%m-%d %H:%M:%S'
 )
+
+def load_variable_names(mapping_file_path):
+  if not mapping_file_path:
+    return None
+
+  variable_names = {}
+
+  logging.info('Load variable name mappings from CSV file')
+  with open(mapping_file_path, 'r') as csv_file:
+    reader = csv.DictReader(
+      csv_file, 
+      dialect = args.dialect
+    )
+
+    for row in reader:
+      qid = row['questionnaire']
+      src = row['source']
+      tgt = row['target']
+
+      if qid not in variable_names:
+        variable_names[qid] = {}
+
+      if src not in variable_names[qid]:
+        variable_names[qid][src] = tgt
+      
+  return variable_names
 
 def load_answer_codes(answer_codes):
   if not answer_codes:
@@ -185,6 +212,7 @@ def main():
   entries = []
   answers = []
   answer_codes = load_answer_codes(args.codes)
+  variable_names = load_variable_names(args.names)
   subjects = set()
 
   # Filter tagged bundle entries for further processing
@@ -232,6 +260,7 @@ def main():
   for answer in answers:
     tag = answer['tag']
     name = answer['name']
+    questionnaire = answer['questionnaire']
     tagged_items = {}
     
     # Format authoring date and prepend as item
@@ -239,9 +268,17 @@ def main():
     date_variable = '{}{}_Date'.format(tag, name)
     tagged_items[date_variable] = datetime.strptime(date, '%Y-%m-%dT%H:%M:%S.%fZ').strftime('%d.%m.%Y')
 
-    # Apply tag as prefix to linkIds
+    # Apply tag as prefix to linkIds and variable name mappings
     for link_id in answer['items'].keys():
-      new_link_id = '{}{}'.format(tag, link_id)
+      variable_name = None
+
+      if questionnaire in variable_names and link_id in variable_names[questionnaire]:
+          variable_name = variable_names[questionnaire][link_id]
+          logging.debug('Perform variable name mapping for questionnaire {} from {} to {}'.format(questionnaire, link_id, variable_name))
+      else:
+        logging.warning('Skip variable name mapping for questionnaire {}, item {}'.format(questionnaire, link_id))
+
+      new_link_id = '{}{}'.format(tag, variable_name) if variable_name else '{}{}'.format(tag, link_id)
       tagged_items[new_link_id] = answer['items'][link_id]
 
     del answer['items']
