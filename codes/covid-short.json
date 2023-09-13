@@ -1126,6 +1126,110 @@
           ]
         }
       ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/COVID-SHORT|digitalHealthcare.healthTechnologiesUsedForHealth",
+      "element": [
+        {
+          "code": "Virtual consultation",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Remote monitoring",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Smartphone/tablet apps (e.g., tracking personal activity or psychological well-being)",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Wearable technology (e.g., a wristband activity tracker)",
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Smart scales",
+          "target": [
+            {
+              "code": "5",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Websites",
+          "target": [
+            {
+              "code": "6",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Social media",
+          "target": [
+            {
+              "code": "7",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Electronic health records",
+          "target": [
+            {
+              "code": "8",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Online support communities",
+          "target": [
+            {
+              "code": "9",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "None",
+          "target": [
+            {
+              "code": "11",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "*",
+          "target": [
+            {
+              "code": "10",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

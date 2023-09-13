@@ -281,6 +281,22 @@ def inline_7x7(a1; a2; a3): [{
             optional(.COVID_Q66_A7; "Haven’t heard of any"),
             optional(.COVID_Q66_A8; "None of the above")
           ]
+        },
+        {
+          "linkId": "digitalHealthcare.healthTechnologiesUsedForHealth",
+          "answer": [
+            optional(.COVID_Q86_A1; "Virtual consultation"),
+            optional(.COVID_Q86_A2; "Remote monitoring"),
+            optional(.COVID_Q86_A3; "Smartphone/tablet apps (e.g., tracking personal activity or psychological well-being)"),
+            optional(.COVID_Q86_A4; "Wearable technology (e.g., a wristband activity tracker)"),
+            optional(.COVID_Q86_A5; "Smart scales"),
+            optional(.COVID_Q86_A6; "Websites"),
+            optional(.COVID_Q86_A7; "Social media"),
+            optional(.COVID_Q86_A8; "Electronic health records"),
+            optional(.COVID_Q86_A9; "Online support communities"),
+            optional(.COVID_Q86_A10; .COVID_Q86_detail),
+            optional(.COVID_Q86_A11; "None")
+          ]
         }
       ]
     }

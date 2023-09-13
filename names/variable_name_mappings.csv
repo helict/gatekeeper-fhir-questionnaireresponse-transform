@@ -99,6 +99,17 @@ http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.usageImpediments.
 http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.usageImpediments.6,COV_Gründe_6
 http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.usageImpediments.7,COV_Gründe_7
 http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.usageImpediments.8,COV_Gründe_8
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth,COV_Technologien_jetzt
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.1,COV_Technologien_jetzt_1
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.2,COV_Technologien_jetzt_2
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.3,COV_Technologien_jetzt_3
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.4,COV_Technologien_jetzt_4
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.5,COV_Technologien_jetzt_5
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.6,COV_Technologien_jetzt_6
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.7,COV_Technologien_jetzt_7
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.8,COV_Technologien_jetzt_8
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.9,COV_Technologien_jetzt_9
+http://example.com/Questionnaire/COVID-SHORT,digitalHealthcare.digitalHealthcare.healthTechnologiesUsedForHealth.10,COV_Technologien_jetzt_10
 http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1,demography.birthDate,COVID-L_Geburtsjahr
 http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1,demography.gender,COVID-L_Geschlecht
 http://hl7.eu/fhir/ig/gk/Questionnaire/covid-quest-1,demography.country,COVID-L_Wohnsitz
