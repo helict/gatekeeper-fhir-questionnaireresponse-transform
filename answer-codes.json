@@ -15880,6 +15880,47 @@
           ]
         }
       ]
+    },
+    {
+      "source": "http://example.com/Questionnaire/UCLA|*",
+      "element": [
+        {
+          "code": "Trifft nicht zu",
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Trifft kaum zu",
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Trifft eher zu",
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "Trifft völlig zu",
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
